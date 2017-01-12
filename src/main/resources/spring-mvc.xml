@@ -10,18 +10,18 @@
     <mvc:annotation-driven/>
 
     <!-- 扫描包 -->
-    <context:component-scan base-package="com.ltx.**">
+    <context:component-scan base-package="com.ltx.controller">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
+
+    <!-- 静态资源过滤 -->
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
 
     <!-- spring 通用视图解析器  （渲染）-->
     <bean id="commonViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
-    <!-- 静态资源过滤 -->
-    <mvc:resources mapping="/resources/**" location="/resources/"/>
 
     <!-- 该异常是SpringMVC 异常配置 -->
     <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
