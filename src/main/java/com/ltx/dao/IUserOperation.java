@@ -2,6 +2,8 @@ package com.ltx.dao;
 
 import com.ltx.entry.Article;
 import com.ltx.entry.User;
+import com.ltx.plugin.PageInfo;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -22,4 +24,6 @@ public interface IUserOperation {
     public List<Article> getUserArticles(int id);
 
     public List<Article> getUserArticles2(int id);
+
+    public List<Article> selectArticleListPage(@Param("page") PageInfo page, @Param("userid") int userid);
 }

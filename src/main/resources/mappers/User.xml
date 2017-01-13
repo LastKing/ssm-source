@@ -93,4 +93,17 @@
         WHERE user.id = article.userid AND user.id = #{id}
     </select>
 
+    <!-- 分页查询测试 -->
+    <select id="selectArticleListPage" resultMap="resultUserArticleList">
+        SELECT
+            user.id,
+            user.userName,
+            user.userAddress,
+            article.id aid,
+            article.title,
+            article.content
+        FROM user, article
+        WHERE USER.id = article.userid AND USER.id = #{userid}
+    </select>
+
 </mapper>
