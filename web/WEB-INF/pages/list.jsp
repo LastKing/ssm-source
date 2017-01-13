@@ -13,9 +13,9 @@
 </head>
 <body>
 
-<%--<c:forEach items="${articles}" var="item">--%>
-    <%--${item.id}--${item.title}--${item.content}<br/>--%>
-<%--</c:forEach>--%>
+<c:forEach items="${articles}" var="item">
+    ${item.id}--${item.title}--${item.content}<br/>
+</c:forEach>
 
 </body>
 </html>
