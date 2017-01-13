@@ -1,4 +1,4 @@
-package com.ltx.entry;
+package com.ltx.entity;
 
 public class User {
 

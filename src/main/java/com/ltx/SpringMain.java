@@ -1,8 +1,8 @@
 package com.ltx;
 
 import com.ltx.dao.IUserOperation;
-import com.ltx.entry.Article;
-import com.ltx.entry.User;
+import com.ltx.entity.Article;
+import com.ltx.entity.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

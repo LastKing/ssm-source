@@ -1,6 +1,6 @@
 package com.ltx.mapper;
 
-import com.ltx.entry.User;
+import com.ltx.entity.User;
 
 import java.util.List;
 
