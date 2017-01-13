@@ -3,15 +3,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-
+    <display-name>Archetype Created Web Application</display-name>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
+    <!-- 同一容器中的多个web项目 需要 配置多个 不同webAppRootKey 防止重复 -->
+    <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>ssm-source</param-value>
+    </context-param>
+
+    <!-- spring 文件配置 ，需要listener -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring-core.xml</param-value>
     </context-param>
+
+    <!-- listen 会根据class 路径创建实例，根据contextInitialized方法，设置上下文  -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
 
     <!-- 字符集过滤-->
     <filter>
@@ -46,8 +59,9 @@
         <listener-class>org.springframework.web.context.ContextCleanupListener</listener-class>
     </listener>
 
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
+    <!-- 设置session过期时间 -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
 
 </web-app>
