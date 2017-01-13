@@ -1,4 +1,4 @@
-package com.ltx.entry;
+package com.ltx.entity;
 
 /**
  * Created by Rain on 2017/1/12.

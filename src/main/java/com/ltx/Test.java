@@ -1,8 +1,8 @@
 package com.ltx;
 
 import com.ltx.dao.IUserOperation;
-import com.ltx.entry.Article;
-import com.ltx.entry.User;
+import com.ltx.entity.Article;
+import com.ltx.entity.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -32,14 +32,14 @@ public class Test {
     }
 
     /**
-     * 这个需要mapper 的namespace 为 entry
+     * 这个需要mapper 的namespace 为 entity
      *
      * @param id
      */
     public void getUserByIdByEntry(int id) {
         SqlSession session = sqlSessionFactory.openSession();
         try {
-            User user = (User) session.selectOne("com.ltx.entry.User.selectUserByID", id);
+            User user = (User) session.selectOne("com.ltx.entity.User.selectUserByID", id);
             System.out.println(user.getUserAddress());
             System.out.println(user.getUserName());
         } finally {

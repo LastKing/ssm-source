@@ -1,7 +1,7 @@
 package com.ltx.controller;
 
 import com.ltx.dao.IUserOperation;
-import com.ltx.entry.Article;
+import com.ltx.entity.Article;
 import com.ltx.plugin.PageInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

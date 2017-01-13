@@ -1,7 +1,7 @@
 package com.ltx.dao;
 
-import com.ltx.entry.Article;
-import com.ltx.entry.User;
+import com.ltx.entity.Article;
+import com.ltx.entity.User;
 import com.ltx.plugin.PageInfo;
 import org.apache.ibatis.annotations.Param;
 

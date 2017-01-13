@@ -4,8 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias alias="User" type="com.ltx.entry.User"/>
-        <typeAlias alias="Article" type="com.ltx.entry.Article"/>
+        <typeAlias alias="User" type="com.ltx.entity.User"/>
+        <typeAlias alias="Article" type="com.ltx.entity.Article"/>
     </typeAliases>
 
     <plugins>
